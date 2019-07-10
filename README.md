@@ -11,13 +11,13 @@ GANのpytorch実装
 ## Usage
 ### Training
 ```
-$ pip install -r requirements.txt
-$ python main.py train
+$ pip install -r requirements.txt 
+$ python main.py train [--dataset]
 # training log saved at ./samples/fake_images-[epoch].png
 ```
 
 ### Generate
 ```
-$ python main.py generate
+$ python main.py generate [--dataset]
 # saved at ./samples/fake_images_%y%m%d%H%M%S.png
 ```
