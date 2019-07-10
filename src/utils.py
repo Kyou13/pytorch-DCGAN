@@ -35,3 +35,15 @@ def get_optim(params, target):
 def denorm(x):
   out = (x + 1) / 2
   return out.clamp(0, 1)
+
+
+# args: torch.nn.modules
+def weights_init(m):
+  classname = m.__class__.__name__  # str
+  if classname.find('Conv') != -1:
+    # args: torch.Tensor
+    # inplaceで動作するため`_`がついている
+    nn.init.normal_(m.weight.data, 0.0, 0.02)
+  elif classname.find('BatchNorm') != -1:
+    nn.init.normal_(m.weight.data, 1.0, 0.02)
+    nn.init.constant_(m.bias.data, 0)
