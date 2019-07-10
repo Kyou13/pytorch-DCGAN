@@ -1,6 +1,6 @@
 # pytorch-DCGAN
 ## Description
-GANのpytorch実装
+DCGANのpytorch実装
 
 ## Requirement
 - Python 3.7
