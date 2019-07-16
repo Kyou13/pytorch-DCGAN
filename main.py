@@ -127,8 +127,9 @@ def train(dataset, data):
       g_losses.append(g_loss.item())
       d_losses.append(d_loss.item())
 
-    save_image(utils.denorm(images), os.path.join(
-        sample_dir, 'real_images.png'))
+    if (epoch + 1) == 1:
+      save_image(utils.denorm(images), os.path.join(
+          sample_dir, 'real_images.png'))
     save_image(utils.denorm(fake_images), os.path.join(
         sample_dir, 'fake_images-{}.png'.format(epoch + 1)))
 
