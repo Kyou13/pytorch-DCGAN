@@ -21,7 +21,7 @@ class Discriminator(nn.Module):
     x = self.leakyReLU(self.bn2(self.conv3(x)))
     x = self.leakyReLU(self.bn3(self.conv4(x)))
     x = torch.sigmoid(self.conv5(x))
-    return x.view(-1)
+    return torch.squeeze(x)
 
 
 class Generator(nn.Module):
