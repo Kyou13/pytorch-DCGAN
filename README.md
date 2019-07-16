@@ -9,11 +9,11 @@ DCGANのpytorch実装
 ## Example
 ### loss
 ![loss](https://github.com/Kyou13/pytorch-DCGAN/blob/master/samples/mnist/loss.png)
-### Genarated Image
+### Generated Image
 - epochs: 5
   - batch size: 128
 
-![genaratedImage](https://github.com/Kyou13/pytorch-DCGAN/blob/master/samples/mnist/fake_images_190717032103.png)
+![generatedImage](https://github.com/Kyou13/pytorch-DCGAN/blob/master/samples/mnist/fake_images_190717032103.png)
 
 
 ## Requirement
